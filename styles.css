@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px dashed red;
+}
+
+:root {
+  --color-very-dark-blue: hsl(217, 19%, 35%);
+  --color-desaturated-dark-blue: hsl(214, 17%, 51%);
+  --color-grayish-blue: hsl(212, 23%, 69%);
+  --color-light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Manrope', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -- article container -- */
+article.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* -- article image -- */
+  div.image {
+    width: 327px;
+    height: 200px;
+
+    img.furniture {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* -- article content -- */
+  div.content {
+    width: 327px;
+
+    h1.content-title {
+      width: 263px;
+      margin: 2em auto;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 2.4rem;
+    }
+
+    p.content-text {
+      width: 263px;
+      margin: 0 auto;
+      font-size: 1.3rem;
+      line-height: 2rem;
+      letter-spacing: 0.12px;
+    }
+
+    /* -- content author -- */
+    section.content-author {
+      width: 263px;
+      margin: 2em auto;
+      display: flex;
+      align-items: center;
+
+      img.author-avatar {
+        width: 4rem;
+        height: 4rem;
+        margin-right: 1.6em;
+        border-radius: 50%;
+      }
+
+      /* -- author details -- */
+      div.author-details {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        letter-spacing: 0.12px;
+
+        h3.author-name {
+          font-size: 'inherit';
+          font-weight: 700;
+        }
+
+        p.publish-date {
+          color: var(--color-grayish-blue);
+        }
+      }
+
+      button.share-btn {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-color: var(--color-light-grayish-blue);
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: 0;
+
+        img.share-icon {
+          width: 15px;
+          height: 13px;
+        }
+      }
+    }
+
+    /* -- share links -- */
+    section.share-links {
+      h3.share-title {
+      }
+      button.share-btn {
+      }
+    }
+  }
+}
+
+/* ======== footer ======== */
+footer.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
