@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px dashed red; */
 }
 
 :root {
@@ -44,9 +43,6 @@ button.share-btn {
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  margin-left: auto;
-  margin-right: 0;
-  outline: 2px dotted red;
 
   img.share-icon {
     width: 15px;
@@ -54,12 +50,14 @@ button.share-btn {
   }
 }
 
-/* ===== MOBILE FIRST ===== */
+/* ========================== */
+/* ====== MOBILE FIRST ====== */
+/* ========================== */
 
 /* -- article container -- */
 article.container {
   min-width: 327px;
-  max-width: 800px;
+  max-width: 730px;
   margin: 0 2.4em;
   border-radius: 10px;
   background-color: var(--color-white);
@@ -86,25 +84,25 @@ article.container {
   /* -- article content -- */
   div.content {
     max-width: 100%;
-    padding: 10% 10% 6%;
+    padding: 8% 10% 6%;
 
     h1.content-title {
       margin: 0 auto 1em;
       color: var(--color-very-dark-blue);
-      font-size: min(2rem, calc(1rem + 1.5vw));
+      font-size: min(2.2rem, calc(1rem + 1.5vw));
       font-weight: 700;
       line-height: 2.4rem;
     }
 
     p.content-text {
-      margin: 0 auto 2.5em;
+      margin: 0 auto 3em;
       color: var(--color-desaturated-dark-blue);
+      font-size: min(1.5rem, calc(1rem + 0.9vw));
       letter-spacing: 0.12px;
     }
 
     /* -- content author -- */
     section.content-author {
-      /* outline: 1px dotted pink; */
       display: flex;
       /* display: none; */
       align-items: center;
@@ -129,21 +127,29 @@ article.container {
         }
       }
 
-      button.share-btn {
+      button.share-btn#inactive-share {
+        margin-left: auto;
+        margin-right: 0;
         background-color: var(--color-light-grayish-blue);
+      }
+
+      button.share-btn#active-share {
+        display: none;
       }
     }
   }
+
   /* -- share links -- */
   div.share-links {
     width: 100%;
     height: 64px;
-    margin-top: -33px;
+    margin-top: -80px;
     border-radius: 0 0 10px 10px;
     background-color: var(--color-very-dark-blue);
 
-    /* display: flex; */
-    display: none;
+    display: flex;
+    /* display: none; */
+    justify-content: start;
     align-items: center;
 
     h3.share-title {
@@ -165,6 +171,7 @@ article.container {
 
     button.share-btn {
       background-color: var(--color-desaturated-dark-blue);
+      margin-left: auto;
       margin-right: 10%;
     }
   }
@@ -181,9 +188,11 @@ footer.attribution {
   }
 }
 
+/* ========================== */
 /* ===== DESKTOP SECOND ===== */
+/* ========================== */
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 960px) {
   /* -- article container [desktop] -- */
   article.container {
     position: relative;
@@ -214,13 +223,13 @@ footer.attribution {
 
       h1.content-title {
         margin: 0 0 0.6em;
-        font-size: min(2.4rem, calc(1.4rem + 0.9vw));
+        font-size: min(2.2rem, calc(1.4rem + 0.9vw));
         line-height: 2.8rem;
       }
 
       p.content-text {
         margin: 0 0 1.5em;
-        font-size: min(1.6rem, calc(0.9rem + 0.6vw));
+        font-size: min(1.5rem, calc(0.9rem + 0.6vw));
       }
 
       /* -- content author [desktop] -- */
@@ -240,14 +249,27 @@ footer.attribution {
             font-size: 1.6rem;
           }
         }
+
+        /* -- share button [desktop] -- */
+        button.share-btn#inactive-share {
+          display: none;
+        }
+
+        button.share-btn#active-share {
+          margin-left: auto;
+          margin-right: 0;
+          background-color: var(--color-very-dark-blue);
+          display: inline-block;
+          /* display: none; */
+        }
       }
     }
 
-    /* -- share links -- */
+    /* -- share links [desktop] -- */
     div.share-links {
       position: absolute;
-      right: calc((1vw - 40px));
-      bottom: 75px;
+      right: calc((1vw - 70px));
+      bottom: 90px;
 
       width: 248px;
       height: 55px;
@@ -277,6 +299,17 @@ footer.attribution {
 
       button.share-btn {
         display: none;
+      }
+
+      /* small square rotated 45 degrees */
+      div.square {
+        width: 2.2rem;
+        height: 2.2rem;
+        background-color: var(--color-very-dark-blue);
+        transform: rotate(45deg);
+        position: absolute;
+        right: 11rem;
+        bottom: -1rem;
       }
     }
   }
