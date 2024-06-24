@@ -11,6 +11,7 @@
   --color-desaturated-dark-blue: hsl(214, 17%, 51%);
   --color-grayish-blue: hsl(212, 23%, 69%);
   --color-light-grayish-blue: hsl(210, 46%, 95%);
+  --color-dark-green: hsl(169, 31%, 40%);
   --color-white: hsl(0, 0%, 100%);
 }
 
@@ -47,6 +48,10 @@ button.share-btn {
   img.share-icon {
     width: 15px;
     height: 13px;
+  }
+
+  &:hover {
+    outline: 3px solid var(--color-dark-green);
   }
 }
 
@@ -161,7 +166,7 @@ article.container {
       text-transform: uppercase;
     }
 
-    a.social-btn {
+    a.social-icon {
       margin-right: 5%;
       border: none;
       background-color: transparent;
@@ -289,7 +294,7 @@ footer.attribution {
         text-transform: uppercase;
       }
 
-      a.social-btn {
+      a.social-icon {
         margin-right: 6%;
         border: none;
         background-color: transparent;
