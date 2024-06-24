@@ -171,6 +171,10 @@ article.container {
       border: none;
       background-color: transparent;
       color: var(--color-white);
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
 
     button.share-btn#links-active-share {
